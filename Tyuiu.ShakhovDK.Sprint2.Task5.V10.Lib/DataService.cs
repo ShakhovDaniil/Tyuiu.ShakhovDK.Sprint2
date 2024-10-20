@@ -1204,6 +1204,34 @@ namespace Tyuiu.ShakhovDK.Sprint2.Task5.V10.Lib
                     throw new ArgumentException($"Месяц должен быть от 1 до 12. Значение - {m}");
             }
             res = $"{n}.{m}.{g}";
+            if (n < 10)
+            {
+                res = $"0{n}.{m}.{g}";
+            }
+            if (m < 10)
+            {
+                res = $"{n}.0{m}.{g}";
+            }
+            if (g < 10)
+            {
+                res = $"{n}.{m}.0{g}";
+            }
+            if ((g < 10) && (m < 10))
+            {
+                res = $"{n}.0{m}.0{g}";
+            }
+            if ((g < 10) && (n < 10))
+            {
+                res = $"0{n}.{m}.0{g}";
+            }
+            if ((m < 10) && (n < 10))
+            {
+                res = $"0{n}.0{m}.{g}";
+            }
+            if ((g < 10) && (m < 10) && (n < 10))
+            {
+                res = $"0{n}.0{m}.0{g}";
+            }
             return res;
         }
     }
