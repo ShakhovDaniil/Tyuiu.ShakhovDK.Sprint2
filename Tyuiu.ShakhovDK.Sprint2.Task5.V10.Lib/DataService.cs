@@ -1203,7 +1203,7 @@ namespace Tyuiu.ShakhovDK.Sprint2.Task5.V10.Lib
                     default:
                     throw new ArgumentException($"Месяц должен быть от 1 до 12. Значение - {m}");
             }
-            res = $"{g}.{m}.{n}";
+            res = $"{n}.{m}.{g}";
             return res;
         }
     }
